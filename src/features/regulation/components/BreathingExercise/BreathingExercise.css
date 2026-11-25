@@ -1,0 +1,56 @@
+/* ==========================================================================
+   BreathingExercise — Círculo animado 100% CSS (Box 4-4-4-4 e 4-7-8)
+   ========================================================================== */
+
+.pf-breathing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.pf-breathing__stage {
+  width: 210px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-breathing__circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-accent-soft) 0%, var(--color-accent) 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.82);
+  transition: transform 1s ease-in-out;
+  box-shadow: var(--shadow-lg);
+}
+
+.pf-breathing__circle--expand {
+  transform: scale(1.22);
+}
+
+.pf-breathing__circle--hold {
+  transform: scale(1.22);
+}
+
+.pf-breathing__circle--contract {
+  transform: scale(0.82);
+}
+
+.pf-breathing__phase {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.pf-breathing__count {
+  font-size: 2rem;
+  font-weight: 800;
+}

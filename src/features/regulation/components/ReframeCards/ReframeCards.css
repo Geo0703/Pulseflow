@@ -1,0 +1,9 @@
+/* ==========================================================================
+   ReframeCards — Fluxo de 3 cartões de reenquadramento cognitivo
+   ========================================================================== */
+
+.pf-reframe {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}

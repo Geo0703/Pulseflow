@@ -1,0 +1,22 @@
+/* ==========================================================================
+   MoodLineChart — Gráfico de linha SVG puro e tooltip acessível
+   ========================================================================== */
+
+.pf-line-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.pf-line-chart__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.pf-line-chart__tooltip {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  font-size: var(--text-xs);
+}

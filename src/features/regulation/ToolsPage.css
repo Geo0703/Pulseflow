@@ -1,0 +1,19 @@
+/* ==========================================================================
+   ToolsPage — Central de micro-estratégias de regulação emocional
+   ========================================================================== */
+
+.pf-tools-page__history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.pf-tools-page__session-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  font-size: var(--text-sm);
+}

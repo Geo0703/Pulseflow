@@ -1,0 +1,10 @@
+/* ==========================================================================
+   NoteTemplates — Seletor discreto de templates de escrita
+   ========================================================================== */
+
+.pf-note-templates {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
