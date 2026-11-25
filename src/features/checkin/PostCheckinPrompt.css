@@ -1,0 +1,18 @@
+/* ==========================================================================
+   PostCheckinPrompt — Convite gentil pós-check-in para micro-regulação
+   ========================================================================== */
+
+.pf-post-prompt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pf-post-prompt__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-accent);
+}

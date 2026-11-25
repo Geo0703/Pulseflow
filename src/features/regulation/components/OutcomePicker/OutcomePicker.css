@@ -1,0 +1,18 @@
+/* ==========================================================================
+   OutcomePicker — Avaliação de impacto pós-exercício
+   ========================================================================== */
+
+.pf-outcome {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+}
+
+.pf-outcome__options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Utilitários de Layout e Grids Responsivos — PulseFlow (src/styles/layout.css)
+   Fornece pilhas verticais, linhas flexíveis e grades mobile-first.
+   ========================================================================== */
+
+/* Pilha vertical com espaçamento consistente */
+.pf-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pf-stack--sm {
+  gap: var(--space-2);
+}
+
+.pf-stack--lg {
+  gap: var(--space-6);
+}
+
+/* Linha horizontal flexível com quebra automática */
+.pf-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.pf-row--between {
+  justify-content: space-between;
+}
+
+/* Grid responsivo padrão (1 coluna no mobile, 2 no tablet+) */
+.pf-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* Grid de KPIs (2 colunas no mobile, 4 no desktop) */
+.pf-grid-kpi {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .pf-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pf-grid-kpi {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Estilos de Impressão / Exportação PDF — PulseFlow (src/styles/print.css)
+   Oculta navegação, botões de ação e modais para gerar relatórios limpos.
+   ========================================================================== */
+
+@media print {
+  /* Força fundo branco e texto escuro para economia de tinta e legibilidade */
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Oculta elementos interativos de navegação e botões */
+  .pf-shell__sidebar,
+  .pf-shell__bottom-nav,
+  .pf-no-print,
+  .pf-toast-container,
+  .pf-modal-backdrop {
+    display: none !important;
+  }
+
+  /* Expande a área de conteúdo para ocupar toda a largura da folha */
+  .pf-shell__content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Evita quebra de página no meio de cartões individuais */
+  .pf-card,
+  .pf-entry-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+}

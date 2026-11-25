@@ -1,0 +1,31 @@
+/* ==========================================================================
+   GoalCard — Cartão de acompanhamento semanal, mensal e streak da meta
+   ========================================================================== */
+
+.pf-goal-card__dots {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.pf-goal-card__dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+}
+
+.pf-goal-card__circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-surface-muted);
+  border: 1.5px solid var(--color-border);
+}
+
+.pf-goal-card__circle--done {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}

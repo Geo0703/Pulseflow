@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Reset CSS Base — PulseFlow (src/styles/reset.css)
+   Normaliza margens, box-sizing, tipografia e elementos interativos entre
+   navegadores sem depender de bibliotecas externas.
+   ========================================================================== */
+
+/* Garante cálculo previsível de larguras e paddings em todos os elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens padrão e define altura mínima da página */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Configura fonte padrão, suavização e cores base a partir dos Design Tokens */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Imagens e SVGs responsivos por padrão */
+img,
+svg,
+canvas,
+audio {
+  max-width: 100%;
+  display: block;
+}
+
+/* Herda tipografia em campos de formulário e botões */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Remove sublinhado padrão de links internos */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Mantém indicador visual acessível ao navegar via teclado */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Utilitário de acessibilidade para textos visíveis apenas a leitores de tela */
+.pf-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

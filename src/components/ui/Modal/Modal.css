@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Componente Modal — BottomSheet no mobile e diálogo central no desktop
+   ========================================================================== */
+
+.pf-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.56);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: 0;
+}
+
+.pf-modal {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  width: 100%;
+  max-height: 92dvh;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pf-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pf-modal__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.pf-modal__close {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pf-modal__close:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-primary);
+}
+
+.pf-modal__body {
+  padding: var(--space-5);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.pf-modal__footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+/* Breakpoint Tablet/Desktop: centraliza o diálogo na tela */
+@media (min-width: 640px) {
+  .pf-modal-backdrop {
+    align-items: center;
+    padding: var(--space-4);
+  }
+
+  .pf-modal {
+    max-width: 600px;
+    border-radius: var(--radius-lg);
+  }
+}

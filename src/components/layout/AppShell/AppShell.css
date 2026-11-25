@@ -1,0 +1,148 @@
+/* ==========================================================================
+   AppShell — Alterna entre BottomNav no mobile e Sidebar fixa no desktop
+   ========================================================================== */
+
+/* Container principal em coluna (Mobile-First) */
+.pf-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* Sidebar oculta em telas móveis */
+.pf-shell__sidebar {
+  display: none;
+}
+
+.pf-shell__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  margin-bottom: var(--space-5);
+}
+
+.pf-shell__brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--quad-red), var(--quad-yellow), var(--quad-blue), var(--quad-green));
+  flex-shrink: 0;
+}
+
+.pf-shell__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-4);
+}
+
+.pf-shell__nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.pf-shell__nav-link:hover {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-primary);
+}
+
+.pf-shell__nav-link--active {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+/* Área central de conteúdo com margem inferior para a BottomNav */
+.pf-shell__content {
+  flex: 1;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-4);
+  padding-bottom: calc(var(--bottom-nav-height) + var(--space-6));
+}
+
+/* Barra de navegação fixa inferior no mobile */
+.pf-shell__bottom-nav {
+  position: fixed;
+  inset: auto 0 0 0;
+  height: var(--bottom-nav-height);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  z-index: var(--z-nav);
+}
+
+.pf-shell__bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.pf-shell__bottom-item--active {
+  color: var(--color-accent);
+}
+
+.pf-shell__fab {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: var(--radius-pill);
+  border: none;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+/* Breakpoint Desktop (>= 1024px): exibe Sidebar fixa e oculta BottomNav */
+@media (min-width: 1024px) {
+  .pf-shell {
+    flex-direction: row;
+  }
+
+  .pf-shell__sidebar {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    padding: var(--space-6) var(--space-4);
+    background-color: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+  }
+
+  .pf-shell__content {
+    padding: var(--space-8);
+  }
+
+  .pf-shell__bottom-nav {
+    display: none;
+  }
+}

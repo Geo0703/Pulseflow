@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Componente Card — Superfície elevada reutilizável (Card.css)
+   ========================================================================== */
+
+.pf-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+}
+
+.pf-card--padded-lg {
+  padding: var(--space-6);
+}
+
+.pf-card--interactive {
+  cursor: pointer;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.pf-card--interactive:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}

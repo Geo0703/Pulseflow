@@ -1,0 +1,54 @@
+/* ==========================================================================
+   ActivityCorrelations — Impacto relativo (delta) e mini barras empilhadas
+   ========================================================================== */
+
+.pf-corr__highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .pf-corr__highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pf-corr__highlight-box {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+}
+
+.pf-corr__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pf-corr__delta {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+}
+
+.pf-corr__delta--pos {
+  background-color: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.pf-corr__delta--neg {
+  background-color: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.pf-corr__stacked {
+  display: flex;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background-color: var(--color-surface-muted);
+}

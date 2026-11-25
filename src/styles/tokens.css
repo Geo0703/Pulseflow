@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Design Tokens Globais — PulseFlow (src/styles/tokens.css)
+   Define cores semânticas, escalas de espaço, tipografia, raios e camadas.
+   ========================================================================== */
+
+:root {
+  /* Superfícies e textos do tema claro padrão */
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-surface-muted: #eef2f6;
+  --color-border: #e2e8f0;
+  --color-text-primary: #1a202c;
+  --color-text-secondary: #5a6577;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-soft: rgba(37, 99, 235, 0.12);
+  --color-danger: #dc2626;
+  --color-danger-soft: rgba(220, 38, 38, 0.12);
+  --color-success: #16a34a;
+  --color-success-soft: rgba(22, 163, 74, 0.12);
+
+  /* Cores da escala de humor de 5 níveis (Daylio) */
+  --mood-1: #e55353; /* Péssimo */
+  --mood-2: #f2994a; /* Mal */
+  --mood-3: #8c9bb0; /* Neutro */
+  --mood-4: #4db6ac; /* Bem */
+  --mood-5: #27ae60; /* Ótimo */
+
+  /* Cores dos 4 quadrantes da matriz emocional 2D (How We Feel) */
+  --quad-red: #e05252;
+  --quad-red-soft: rgba(224, 82, 82, 0.14);
+  --quad-yellow: #eab308;
+  --quad-yellow-soft: rgba(234, 179, 8, 0.16);
+  --quad-blue: #3b82f6;
+  --quad-blue-soft: rgba(59, 130, 246, 0.14);
+  --quad-green: #22c55e;
+  --quad-green-soft: rgba(34, 197, 94, 0.14);
+
+  /* Escala de espaçamento em múltiplos de 4px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Escala tipográfica fluida */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  --text-xl: clamp(1.375rem, 2.2vw, 1.75rem);
+
+  /* Raios, sombras e transições suaves */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.14);
+  --transition-fast: 160ms ease;
+  --transition-base: 240ms ease;
+
+  /* Dimensões estruturais do shell e camadas de empilhamento (z-index) */
+  --sidebar-width: 248px;
+  --bottom-nav-height: 68px;
+  --container-max: 1120px;
+  --z-nav: 40;
+  --z-modal: 60;
+  --z-toast: 80;
+  --z-lock: 100;
+}

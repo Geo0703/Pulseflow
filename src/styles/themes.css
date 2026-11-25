@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Temas e Paletas Semânticas — PulseFlow (src/styles/themes.css)
+   Sobrescreve variáveis CSS conforme data-theme e data-palette no <html>.
+   ========================================================================== */
+
+/* Sobrescritas de superfície, borda e sombra para o Tema Escuro */
+[data-theme="dark"] {
+  --color-bg: #0f141c;
+  --color-surface: #18202c;
+  --color-surface-elevated: #212c3c;
+  --color-surface-muted: #1e293b;
+  --color-border: #2a3648;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-accent-soft: rgba(59, 130, 246, 0.18);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.55);
+}
+
+/* Paleta Pastel para escala de humor */
+[data-palette="pastel"] {
+  --mood-1: #f28b82;
+  --mood-2: #fbbc04;
+  --mood-3: #aecbfa;
+  --mood-4: #81c995;
+  --mood-5: #5bb974;
+}
+
+/* Paleta Alto Contraste para acessibilidade ampliada */
+[data-palette="high-contrast"] {
+  --mood-1: #c62828;
+  --mood-2: #ef6c00;
+  --mood-3: #455a64;
+  --mood-4: #00838f;
+  --mood-5: #1b5e20;
+}

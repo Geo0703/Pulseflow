@@ -1,0 +1,15 @@
+/* ==========================================================================
+   GroundingWizard — Fluxo sequencial 5-4-3-2-1 com barra de progresso
+   ========================================================================== */
+
+.pf-grounding {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pf-grounding__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}

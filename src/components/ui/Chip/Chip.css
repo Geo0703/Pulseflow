@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Componente Chip — Estilos base e modificadores BEM (Chip.css)
+   ========================================================================== */
+
+/* Estrutura base do chip clicável em formato de pílula */
+.pf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+  user-select: none;
+}
+
+/* Modificadores de tamanho respeitando alvo de toque acessível */
+.pf-chip--sm {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  min-height: 32px;
+}
+
+.pf-chip--md {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  min-height: 44px;
+}
+
+/* Estados interativos */
+.pf-chip:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.pf-chip:active {
+  transform: scale(0.97);
+}
+
+.pf-chip__icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+/* Estados selecionados por tom semântico (neutro e 4 quadrantes How We Feel) */
+.pf-chip--selected.pf-chip--tone-default {
+  background-color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  color: var(--color-surface);
+}
+
+.pf-chip--selected.pf-chip--tone-red {
+  background-color: var(--quad-red);
+  border-color: var(--quad-red);
+  color: #ffffff;
+}
+
+.pf-chip--selected.pf-chip--tone-yellow {
+  background-color: var(--quad-yellow);
+  border-color: var(--quad-yellow);
+  color: #1a202c;
+}
+
+.pf-chip--selected.pf-chip--tone-blue {
+  background-color: var(--quad-blue);
+  border-color: var(--quad-blue);
+  color: #ffffff;
+}
+
+.pf-chip--selected.pf-chip--tone-green {
+  background-color: var(--quad-green);
+  border-color: var(--quad-green);
+  color: #052e16;
+}

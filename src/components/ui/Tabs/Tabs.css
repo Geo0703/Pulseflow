@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Componente Tabs — Navegação segmentada acessível (Tabs.css)
+   ========================================================================== */
+
+.pf-tabs {
+  display: inline-flex;
+  background-color: var(--color-surface-muted);
+  padding: var(--space-1);
+  border-radius: var(--radius-md);
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+.pf-tabs__tab {
+  min-height: 38px;
+  padding: var(--space-1) var(--space-4);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.pf-tabs__tab--active {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+}
